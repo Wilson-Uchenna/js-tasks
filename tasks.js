@@ -115,6 +115,11 @@ function hashtagGenerator(...input) {
     } 
     let field = ""
     for (let i = 0;i < input.length; i++) {
+        for (let j = 0;j <input[i].length;j++) {
+        if (/\s+/.test(input[i][j])) {
+            input[i] = input[i].substring(0,j) + input[i].substring(j+1)
+        }
+    }
         field += "#" + input[i].trim() + ""
     }
     return field
