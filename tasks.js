@@ -120,7 +120,8 @@ function hashtagGenerator(...input) {
             input[i] = input[i].substring(0,j) + input[i].substring(j+1)
         }
     }
-        field += "#" + input[i].trim() + ""
+    input[i] = input[i][0].toUpperCase() + input[i].substring(1)
+        field += "#" + input[i].trim() + "";
     }
     return field
 }
