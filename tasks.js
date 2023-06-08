@@ -4,7 +4,10 @@ function fahrenheitToCelcius(fahrenheit) {
     const celsius = (fahrenheit - 32) * 5 / 9;
     return celsius
 }
+//1. test case
 console.log(fahrenheitToCelcius(68));
+
+
 //2. Create a function that will calculate the average of numbers in an array.
 function averNumbers(arr) {
     let sum = 0
@@ -13,9 +16,11 @@ function averNumbers(arr) {
     }
     return sum / arr.length
 }
+//2. test case
 averNumbers([1,2,4,5,10])
-//3. Create a function that checks if a number, n is divisible by two numbers x and y. All inputs are positive, non-zero digits.
 
+
+//3. Create a function that checks if a number, n is divisible by two numbers x and y. All inputs are positive, non-zero digits.
 function divisNumbers(n,x,y) {
     if (n <= 0) {
         return false
@@ -25,7 +30,10 @@ function divisNumbers(n,x,y) {
     }
     return true
 }
+//3. test case
 divisNumbers(5,2,3)
+
+
 //4.  Create a function that will output the first 100 prime numbers.
 function outputPrime(count) {
     let output = [];
@@ -50,8 +58,11 @@ function outputPrime(count) {
     return output.join(",")
 }
 console.log(outputPrime(100))
-//5. Create a function that will return a boolean specifying if a number is a prime number.
+//4. test case
+outputPrime(250)
 
+
+//5. Create a function that will return a boolean specifying if a number is a prime number.
 function isPrime(number) {
     if (number <= 1) {
         return false
@@ -64,18 +75,21 @@ function isPrime(number) {
             return true
 }
 console.log(isPrime(10))
+//5. test case
+isPrime(20)
 
 //6. Create a function that receives an array of numbers of diverse numbers and returns an array containing only positive numbers.
-
 function diversNumbers(arr) {
     const newArr = [...arr]
     const myArray = newArr.filter(num => 'number' === typeof num && num > 0)
     return myArray;
 }
 console.log(diversNumbers([1,2,5, "is", true]));
+//6. TEST case
+diversNumbers([1,-4,3,2,-5,7])
+
 
 //7. Write a program that prints the numbers from 1 to 100. But for multiples of 3 prints "Fizz" instead of the number and for the multiples of 5 prints "Buzz". For numbers which are multiples of both 3 and 5 prints "FizzBuzz".
-
 function fizzBuzzPrint(count) {
     let output = []
     function fizz(num) {
@@ -101,6 +115,9 @@ function fizzBuzzPrint(count) {
     return output
 }
 console.log(fizzBuzzPrint(100));
+//7. test case
+fizzBuzzPrint(100)
+
 
 //8. The marketing team is spending way too much time typing in hashtags. Let’s create a hashtag generator for them, our hashtag generator will meet the following criteria; 
 //It must start with a hash symbol, #.
@@ -126,3 +143,5 @@ function hashtagGenerator(...input) {
     return field
 }
 console.log(hashtagGenerator("capcut", "strign"))
+//8. test case
+hashtagGenerator("sweet", "middle")
